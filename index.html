@@ -781,5 +781,58 @@ const obs = new IntersectionObserver(entries=>{
 },{threshold:0.08, rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+  <style>
+  .glovance-badge {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #152131;
+    color: #FBF9F4;
+    padding: 8px 14px 8px 8px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(21,33,49,0.35);
+    border: 1px solid rgba(201,162,39,0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .glovance-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(21,33,49,0.45);
+  }
+  .glovance-badge img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+  }
+  .glovance-badge span {
+    white-space: nowrap;
+  }
+  .glovance-badge .gb-accent {
+    color: #C9A227;
+  }
+  @media (max-width: 480px) {
+    .glovance-badge {
+      bottom: 12px;
+      right: 12px;
+      padding: 6px 12px 6px 6px;
+      font-size: 11px;
+    }
+    .glovance-badge img { width: 18px; height: 18px; }
+  }
+</style>
+
+<a href="https://glovance-digital-solutions.netlify.app/" target="_blank" rel="noopener" class="glovance-badge">
+  <img src="https://i.imgur.com/PLACEHOLDER-LOGO.png" alt="Glovance Digital Solutions" onerror="this.style.display='none'">
+  <span>Built by <span class="gb-accent">Glovance</span></span>
+</a>
+
 </body>
 </html>
